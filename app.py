@@ -4,18 +4,55 @@ app = Flask(__name__)
 app.secret_key = "bakery-secret"
 
 PRODUCTS = [
-    {"id":1,"name":"Tiramisu","price":8.99},
-    {"id":2,"name":"Lotus Biscoff","price":7.99},
-    {"id":3,"name":"Belgian Waffle","price":5.99},
-    {"id":4,"name":"Chocolate Waffle","price":6.49},
-    {"id":5,"name":"Bread","price":2.99},
-    {"id":6,"name":"Croissant","price":3.49},
-    {"id":7,"name":"Baguette","price":2.49},
-    {"id":8,"name":"Muffin","price":2.99},
-    {"id":9,"name":"Donut","price":1.99},
-    {"id":10,"name":"Cake","price":12.99},
+    {
+        "id": 1,
+        "name": "Tiramisu",
+        "price": 8.99,
+        "image": "tiramisu.png"
+    },
+    {
+        "id": 2,
+        "name": "Lotus Biscoff",
+        "price": 7.99,
+        "image": "lotus-biscoff.png"
+    },
+    {
+        "id": 3,
+        "name": "Belgian Waffle",
+        "price": 6.99,
+        "image": "belgain-waffle.png"
+    },
+    {
+        "id": 4,
+        "name": "Croissant",
+        "price": 3.99,
+        "image": "croissant.png"
+    },
+    {
+        "id": 5,
+        "name": "Cake",
+        "price": 14.99,
+        "image": "cake.png"
+    },
+    {
+        "id": 6,
+        "name": "Donut",
+        "price": 2.99,
+        "image": "donut.png"
+    },
+    {
+        "id": 7,
+        "name": "Baguette",
+        "price": 3.49,
+        "image": "baguette.png"
+    },
+    {
+        "id": 8,
+        "name": "Cinnamon Roll",
+        "price": 4.99,
+        "image": "cinnamon-roll.png"
+    }
 ]
-
 @app.route("/")
 def home():
     return render_template("index.html", products=PRODUCTS)
