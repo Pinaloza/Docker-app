@@ -1,0 +1,7 @@
+
+<h1>Cart</h1>
+{% for p,qty,sub in items %}
+<p>{{p.name}} x {{qty}} = ${{sub}}</p>
+{% endfor %}
+<h3>Total: ${{total}}</h3>
+<a href="/checkout">Checkout</a>

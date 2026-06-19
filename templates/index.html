@@ -1,0 +1,6 @@
+
+<h1>Bakery Store</h1>
+<a href="/cart">View Cart</a><hr>
+{% for p in products %}
+<p><b>{{p.name}}</b> - ${{p.price}} <a href="/add/{{p.id}}">Add to Cart</a></p>
+{% endfor %}
